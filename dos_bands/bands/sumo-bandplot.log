@@ -1,0 +1,11 @@
+C:\ProgramData\Anaconda3\Scripts\sumo-bandplot --dos ../dos/vasprun.xml --project I.p,Pb.p --elements I.p,Pb.p --config colours.conf --format jpg --dpi 300 --ymin -2 --ymax 2 --dos-label DOS --band-edges --style colours.style -p dos
+Label positions:
+	0.0000: $\Gamma$
+	0.4946: X
+	0.9942: S
+	1.4898: R
+	1.9894: U
+	2.4840: Z
+	2.9836: T
+	3.4792: Y
+	3.9787: $\Gamma$
