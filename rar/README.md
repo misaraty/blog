@@ -1,5 +1,5 @@
 <p align=center>
-<img src="https://github.com/misaraty/juliaplus/blob/master/logo.jpg" width=300px height=auto/>
+<img src="./logo.jpg" width=300px height=auto/>
 </p>
 
 **Julia+** is a project that provides the installation of third-party scientific computing packages.
