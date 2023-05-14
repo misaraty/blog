@@ -10434,3 +10434,7 @@ Zoologischer Anzeiger	Zool. Anz.
 Zoology and Ecology	Zool. Ecol.
 Zoonoses and Public Health	Zoonoses Public Health
 Zoosystematics and Evolution	Zoosyst. Evol.
+The Journal of Physical Chemistry C	J. Phys. Chem. C
+Industrial & Engineering Chemistry Research	Ind. Eng. Chem. Res.
+Advances in neural information processing systems	J. Inf. Process. Syst.
+Journal of Chemical & Engineering Data	J. Chem. Eng. Data
