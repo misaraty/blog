@@ -8523,7 +8523,6 @@ Physica Status Solidi B Basic Solid State Physics	Phys. Status Solidi B
 Physica Status Solidi C Current Topics in Solid State Physics	Phys. Status Solidi C
 Physica Status Solidi Rapid Research Letters	Phys. Status Solidi RRL
 Physical Biology	Phys. Biol.
-Physical Chemistry Chemical Physics	PCCP
 Physical Chemistry Chemical Physics	Phys. Chem. Chem. Phys.
 Physical Communication	Phys. Commun.
 Physical Geography	Phys. Geogr.
