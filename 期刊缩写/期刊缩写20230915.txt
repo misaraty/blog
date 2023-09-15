@@ -82,7 +82,7 @@ ACM Transactions on Speech and Language Processing	ACM Trans. Speech Lang. Proce
 ACM Transactions on Storage	ACM Trans. Storage
 ACM Transactions on the Web	ACM Trans. Web
 ACM/IMS Transactions on Data Science	ACM/IMS Trans. Data Sci.
-ACM?€?Transactions?€?on Recommender Systems	ACM Trans. Recommender Syst.
+ACM Transactions on Recommender Systems Systems	ACM Trans. Recommender Syst.
 Acoustical Imaging	Acoust. Imaging
 Acoustical Physics	Acoust. Phys.
 Acoustical Science and Technology	Acoust. Sci. Technol.
@@ -6599,6 +6599,9 @@ Journal of Physical Chemistry B	J. Phys. Chem. B
 Journal of Physical Chemistry C	J. Phys. Chem. C
 Journal of Physical Chemistry Letters	J. Phys. Chem. Lett.
 The Journal of Physical Chemistry Letters	J. Phys. Chem. Lett.
+The Journal of Physical Chemistry C	J. Phys. Chem. C
+The Journal of Physical Chemistry B	J. Phys. Chem. B
+The Journal of Physical Chemistry A	J. Phys. Chem. A
 Journal of Physical Oceanography	J. Phys. Oceanogr.
 Journal of Physical Organic Chemistry	J. Phys. Org. Chem.
 Journal of Physics A: General Physics	J. Phys. A: Gen. Phys.
@@ -10434,7 +10437,6 @@ Zoologischer Anzeiger	Zool. Anz.
 Zoology and Ecology	Zool. Ecol.
 Zoonoses and Public Health	Zoonoses Public Health
 Zoosystematics and Evolution	Zoosyst. Evol.
-The Journal of Physical Chemistry C	J. Phys. Chem. C
 Industrial & Engineering Chemistry Research	Ind. Eng. Chem. Res.
 Advances in neural information processing systems	J. Inf. Process. Syst.
 Journal of Chemical & Engineering Data	J. Chem. Eng. Data
