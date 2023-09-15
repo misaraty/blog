@@ -6593,6 +6593,7 @@ Journal of Phycology	J. Phycol.
 Journal of Physical and Chemical Reference Data	J. Phys. Chem. Ref. Data
 Journal of Physical and Colloid Chemistry	J. Phys. Colloid Chem.
 Journal of Physical Chemistry	J. Phys. Chem.
+The Journal of Physical Chemistry	J. Phys. Chem.
 Journal of Physical Chemistry A	J. Phys. Chem. A
 Journal of Physical Chemistry B	J. Phys. Chem. B
 Journal of Physical Chemistry C	J. Phys. Chem. C
