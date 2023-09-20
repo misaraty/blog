@@ -28,6 +28,7 @@ lines = data.strip().split("\n")
 x, y = zip(*[map(float, line.split()) for line in lines])
 
 # 绘图
+plt.plot(x, y, color='tab:red', label='Line through Data Points')
 plt.scatter(x, y, color='tab:blue', label='Data Points')
 plt.xlabel('t/min')
 plt.ylabel(r'$\alpha$' + '/°')

@@ -27,6 +27,8 @@ y = data(:, 2);
 
 % 绘图
 figure;
+plot(x, y, '-r', 'DisplayName', 'Line through Data Points');
+hold on; % 保持当前图形
 scatter(x, y, 'blue', 'DisplayName', 'Data Points');
 xlabel('t/min');
 ylabel('\alpha/°');
