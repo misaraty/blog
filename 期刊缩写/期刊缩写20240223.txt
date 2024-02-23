@@ -4809,7 +4809,6 @@ International Journal of High Performance Systems Architecture	Int. J. High Perf
 International Journal of High Speed Electronics and Systems	Int. J. High Speed Electron. Syst.
 International Journal of High Technology Ceramics	Int. J. Hig Technol. Ceram.
 International Journal of Human Genetics	Int. J. Hum. Genet.
-International Journal of Human?€¡°Computer Interaction	Int. J. Hum.-Comput. Interact.
 International Journal of Human-Computer Studies	Int. J. Hum. Comput. Stud.
 International Journal of Humanoid Robotics	Int. J. Humanoid Rob.
 International Journal of Hybrid Intelligent Systems	Int. J. Hybrid Intell. Syst.
@@ -10440,3 +10439,4 @@ Zoosystematics and Evolution	Zoosyst. Evol.
 Industrial & Engineering Chemistry Research	Ind. Eng. Chem. Res.
 Advances in neural information processing systems	J. Inf. Process. Syst.
 Journal of Chemical & Engineering Data	J. Chem. Eng. Data
+Information Fusion	Inf. Fusion
