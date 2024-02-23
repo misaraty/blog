@@ -10440,3 +10440,4 @@ Industrial & Engineering Chemistry Research	Ind. Eng. Chem. Res.
 Advances in neural information processing systems	J. Inf. Process. Syst.
 Journal of Chemical & Engineering Data	J. Chem. Eng. Data
 Information Fusion	Inf. Fusion
+Journal of Big Data	J. Big Data
