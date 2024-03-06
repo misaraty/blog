@@ -45,9 +45,11 @@ plt.plot(peak_x, peak_y, 'o', label='$b$', color='tab:purple')
 plt.plot(peak_x, A_1, 'o', label='$a$', color='tab:orange')
 
 # Adding labels, legend, and grid
-plt.xlabel('$x_R$', fontname='Microsoft YaHei', fontsize=12)
-plt.ylabel('$A$', fontname='Microsoft YaHei', fontsize=12, style='normal')
-plt.legend()
+plt.xlabel('$x_R$', fontname='Microsoft YaHei', fontsize=14)
+plt.ylabel('$A$', fontname='Microsoft YaHei', fontsize=14, style='normal')
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.legend(fontsize=12)
 plt.grid(True)
 
 # Adding vertical and horizontal lines for points a and b with annotations
