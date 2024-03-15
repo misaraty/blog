@@ -10,16 +10,16 @@ plt.rcParams['font.sans-serif'] = ['Microsoft Yahei']
 
 # Data points for the ternary plot
 data_points = np.array([
-    [0.4935, 0.0317, 0.4748],
-    [0.3758, 0.0724, 0.5518],
-    [0.2497, 0.0801, 0.6701],
-    [0.2070, 0.1328, 0.6602],
-    [0.1421, 0.1459, 0.7121],
-    [0.1212, 0.1790, 0.6998],
-    [0.0772, 0.1882, 0.7346],
-    [0.0620, 0.2386, 0.6995],
-    [0.0386, 0.2600, 0.7014],
-    [0.0300, 0.3103, 0.6597]
+    [0.4028, 0.0259, 0.5714],
+    [0.3181, 0.0695, 0.6124],
+    [0.2557, 0.0887, 0.6556],
+    [0.2169, 0.1170, 0.6660],
+    [0.1666, 0.1541, 0.6794],
+    [0.1386, 0.1906, 0.6708],
+    [0.1053, 0.2461, 0.6486],
+    [0.0770, 0.3117, 0.6112],
+    [0.0531, 0.3684, 0.5785],
+    [0.0385, 0.3966, 0.5649]
 ])
 
 # Creating subplot with ternary projection
@@ -38,7 +38,7 @@ ax.scatter(*E, color='tab:purple', label='E')
 # Annotating points E and O with their labels and coordinates
 ax.text(O[2], O[0]+0.05, f'O {O}', horizontalalignment='left', verticalalignment='center', transform=ax.transAxes, color='tab:green')
 ax.text(E[2]+0.45, E[0]+0.05, f'E {E}', horizontalalignment='right', verticalalignment='center', transform=ax.transAxes, color='tab:purple')
-ax.set_title('请同学们自行画出HG连接线！',color='tab:red')
+# ax.set_title('请同学们自行画出HG连接线！',color='tab:red')
 
 # Label settings
 ax.set_tlabel("C(乙醇)")
