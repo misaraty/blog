@@ -1,0 +1,1 @@
+C:\ProgramData\Anaconda3\Scripts\sumo-dosplot --elements I.p,Pb.p --config colours.conf --format jpg --dpi 300 --ylabel PDOS --columns 1 --xmin -2 --xmax 2

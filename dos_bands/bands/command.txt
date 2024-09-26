@@ -1,0 +1,12 @@
+sumo-dosplot --config colours.conf --format jpg --dpi 300 --ylabel PDOS --columns 1 --xmin -2 --xmax 2
+
+sumo-dosplot --elements I.p,Pb.p --config colours.conf --format jpg --dpi 300 --ylabel PDOS --columns 1 --xmin -2 --xmax 2
+
+sumo-bandplot --project Pb.s,Pb.p,I.s,I.p --mode stacked --circle-size 90 --format jpg --dpi 300
+
+sumo-bandplot  --dos ../dos/vasprun.xml --project I.p,Pb.p --elements I.p,Pb.p --config colours.conf --format jpg --dpi 300 --ymin -2 --ymax 2  --dos-label "DOS" --band-edges --style colours.style -p dos
+
+
+
+
+

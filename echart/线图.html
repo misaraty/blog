@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网页标签</title>
+<script src="https://cdn.staticfile.org/echarts/4.7.0/echarts.js"></script>
+<!-- <script src="./echarts.js"></script> -->
+</head>
+
+<body>
+<div id="main" style="width:600px; height:400px;"></div>
+<script type="text/javascript">
+var myChart=echarts.init(document.getElementById('main'));
+
+var option = {
+    title: {text:'标题',subtext:'x-y',left:'center'},
+	tooltip: {trigger:'axis',axisPointer:{type:'shadow'}},
+	grid:{left:'3%',right:'4%',bottom:'3%',containLabel:true},
+    legend: {data:['标签1','标签2'],left:'right'},
+    xAxis: {min:0,max:5,type:'value',axisLine:{onZero:false},axisLabel:{formatter:'{value}'}},
+    yAxis: {min:0,max:50,type:'value',axisLine:{onZero:false},axisLabel:{formatter:'{value}'}},
+    series: [{name:'标签1',type:'line',areaStyle:{normal:{opacity:0.4}},smooth:true,symbolSize:15,symbol:'circle',data:[[1,5],[2,10],[3,20],[4,15]],markLine:{silent:true,data:[{xAxis:3.3},{yAxis:22}]}},
+	//symbol: 'circle','rect'
+	{name:'标签2',type:'line',areaStyle:{normal:{opacity:0.4}},smooth:true,symbolSize:15,symbol:'circle',data:[[1,40],[2,30],[3,15],[4,25]],markLine:{silent:true,data:[{xAxis:2.2},{yAxis:33}]},markPoint:{data:[{name:'特殊点',xAxis:2.5,yAxis:30}]},markArea:{silent:true,itemStyle:{normal:{color:'transparent',borderWidth:1,borderType:'dashed'}},data:[[{name:'区间',xAxis:2.6,yAxis:30},{xAxis:3.9,yAxis:10}]]},}]};
+
+myChart.setOption(option);
+</script>
+</body>
+</html>
