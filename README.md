@@ -1,5 +1,5 @@
 <p align=center>
-<img src="./logo.png" width=auto height=auto/>
+<img src="./logo.jpg" width=auto height=auto/>
 </p>
 
 ## Contact
