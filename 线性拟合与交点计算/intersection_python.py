@@ -31,6 +31,7 @@ y_fit2 = f2(x_fit)
 
 # 绘图
 plt.figure(figsize=(6, 4), dpi=300)
+plt.title('线性拟合交点计算')
 plt.plot(x1, y1, 'o', label='Data 1', color='tab:blue')
 plt.plot(x2, y2, 'o', label='Data 2', color='tab:orange')
 plt.plot(x_fit, y_fit1, '-', label=f'Fit 1: y={coef1[0]:.2f}x+{coef1[1]:.2f}', color='tab:blue')
