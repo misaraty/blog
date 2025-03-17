@@ -1,0 +1,274 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9495,        266]
+NotebookOptionsPosition[      8954,        247]
+NotebookOutlinePosition[      9414,        265]
+CellTagsIndexPosition[      9371,        262]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:6570\:636e", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"data1", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0.002", ",", "159.3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0024", ",", "181.4"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0036", ",", "271"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.005", ",", "361"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0062", ",", "426"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0071", ",", "475"}], "}"}]}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"data2", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0.01", ",", "588"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0114", ",", "638"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0126", ",", "698"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0136", ",", "734"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0146", ",", "773"}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "\:7ebf\:6027\:62df\:5408", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fit1", "=", 
+     RowBox[{"Fit", "[", 
+      RowBox[{"data1", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "x"}], "}"}], ",", "x"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"fit2", "=", 
+     RowBox[{"Fit", "[", 
+      RowBox[{"data2", ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "x"}], "}"}], ",", "x"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "\:8ba1\:7b97\:4ea4\:70b9", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"solve", "=", 
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"fit1", "==", "fit2"}], ",", "x"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"intersection", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "/.", " ", 
+        RowBox[{"solve", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+       RowBox[{"fit1", "/.", " ", 
+        RowBox[{"solve", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "\:751f\:6210\:62df\:5408\:66f2\:7ebf\:6570\:636e", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"xRange", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Min", "[", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"data1", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+          RowBox[{"data2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}], "]"}], ",", 
+       RowBox[{"Max", "[", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"data1", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+          RowBox[{"data2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}], "]"}]}], 
+      "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"fitLine1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{"fit1", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"xRange", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"xRange", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "color1"}], "}"}]}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"fitLine2", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{"fit2", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"xRange", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"xRange", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "color2"}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:989c\:8272\:8bbe\:5b9a", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"color1", "=", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{
+       RowBox[{"31", "/", "255"}], ",", 
+       RowBox[{"119", "/", "255"}], ",", 
+       RowBox[{"180", "/", "255"}]}], "]"}]}], ";", 
+    RowBox[{"(*", 
+     RowBox[{"tab", ":", "blue"}], "*)"}], 
+    RowBox[{"color2", "=", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{
+       RowBox[{"255", "/", "255"}], ",", 
+       RowBox[{"127", "/", "255"}], ",", 
+       RowBox[{"14", "/", "255"}]}], "]"}]}], ";", 
+    RowBox[{"(*", 
+     RowBox[{"tab", ":", "orange"}], "*)"}], 
+    RowBox[{"intersectColor", "=", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{
+       RowBox[{"214", "/", "255"}], ",", 
+       RowBox[{"39", "/", "255"}], ",", 
+       RowBox[{"40", "/", "255"}]}], "]"}]}], ";", 
+    RowBox[{"(*", "red", "*)"}], 
+    RowBox[{"(*", "\:7ed8\:5236\:56fe\:5f62", "*)"}], 
+    RowBox[{"plot", "=", 
+     RowBox[{"Show", "[", 
+      RowBox[{
+       RowBox[{"ListPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"data1", ",", "data2"}], "}"}], ",", 
+         RowBox[{"PlotStyle", "->", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"PointSize", "[", "0.02", "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"color1", ",", "color2"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"PlotMarkers", "->", "Automatic"}], ",", 
+         RowBox[{"Joined", "->", "False"}]}], "]"}], ",", "fitLine1", ",", 
+       "fitLine2", ",", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", 
+         RowBox[{"intersectColor", ",", 
+          RowBox[{"PointSize", "[", "0.03", "]"}], ",", 
+          RowBox[{"Point", "[", "intersection", "]"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Frame", "->", "True"}], ",", 
+       RowBox[{"GridLines", "->", "Automatic"}], ",", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
+       RowBox[{"LabelStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"FontFamily", "->", "\"\<LXGW ZhenKai\>\""}], ",", 
+          RowBox[{"FontSize", "->", "12"}], ",", "Bold"}], "}"}]}], ",", 
+       RowBox[{"PlotLabel", "->", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<\:7ebf\:6027\:62df\:5408\:4ea4\:70b9\:8ba1\:7b97\>\"", ",", 
+          RowBox[{"FontFamily", "->", "\"\<LXGW ZhenKai\>\""}], ",", 
+          RowBox[{"FontSize", "->", "12"}], ",", "Bold"}], "]"}]}], ",", 
+       RowBox[{"PlotLegends", "->", 
+        RowBox[{"Placed", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<Data 1\>\"", ",", "\"\<Data 2\>\"", ",", 
+            RowBox[{"StringForm", "[", 
+             RowBox[{"\"\<Fit 1: ``\>\"", ",", "fit1"}], "]"}], ",", 
+            RowBox[{"StringForm", "[", 
+             RowBox[{"\"\<Fit 2: ``\>\"", ",", "fit2"}], "]"}], ",", 
+            RowBox[{"StringForm", "[", 
+             RowBox[{"\"\<Intersection: (`` , ``)\>\"", ",", 
+              RowBox[{"intersection", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"intersection", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], "}"}], ",", 
+          "Above"}], "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"\:4fdd\:5b58\:4e3a", " ", "300", " ", "dpi", " ", "JPG"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\<C:\\\\Users\\\\lenovo\\\\Desktop\\\\intersection_mathematica_plot.\
+jpg\>\"", ",", "plot", ",", "\"\<JPEG\>\"", ",", 
+      RowBox[{"ImageResolution", "->", "300"}]}], "]"}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:8f93\:51fa\:4ea4\:70b9\:5750\:6807", "*)"}], 
+   "\[IndentingNewLine]", "intersection", "\n"}]}]], "Input",
+ CellChangeTimes->{{3.951201326851036*^9, 3.9512014249135914`*^9}, {
+  3.951201523301612*^9, 3.9512015455921106`*^9}},
+ CellLabel->
+  "In[188]:=",ExpressionUUID->"257f26d4-4d38-4e8f-acfe-d0116368af6c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.00641988990100436`", ",", "440.01655029688544`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.951201363914293*^9, 3.9512013998255854`*^9}, 
+   3.951201458840633*^9, {3.951201529741377*^9, 3.951201548413791*^9}, 
+   3.951203077966037*^9},
+ CellLabel->
+  "Out[199]=",ExpressionUUID->"64d45528-dc2f-4945-ab77-5356044e1540"]
+}, Open  ]]
+},
+WindowSize->{1097.142857142857, 618.},
+WindowMargins->{{
+  Automatic, -5.14285714285711}, {-5.14285714285711, Automatic}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (2021\:5e747\:670823\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"84f71bf9-40f9-46a1-8539-ecdc76b212b4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 7993, 212, 925, "Input",ExpressionUUID->"257f26d4-4d38-4e8f-acfe-d0116368af6c"],
+Cell[8576, 236, 362, 8, 32, "Output",ExpressionUUID->"64d45528-dc2f-4945-ab77-5356044e1540"]
+}, Open  ]]
+}
+]
+*)
+
