@@ -1,7 +1,5 @@
 # MBeautifier
 
-## https://github.com/davidvarga/MBeautifier
-
 MBeautifier is a lightweight M-Script based MATLAB source code formatter usable directly in the MATLAB Editor.
 
 ![Basic working](https://cloud.githubusercontent.com/assets/12681120/20592407/904cb1d6-b22d-11e6-93dd-1637c3738e50.png)

@@ -113,6 +113,10 @@ classdef MFormatter < handle
 
                 %% Determine the position where the line shall be splitted into code and comment
                 [actCode, actComment, splittingPos, isSectionSeparator] = obj.findComment(line);
+                commentSpacing = regexp(actCode, '\s+$', 'match');
+                if numel(commentSpacing) > 0 && actComment ~= "" && obj.Configuration.specialRule('PreserveInlineCommentSpacing').ValueAsDouble() ~= 0
+                    actComment = [commentSpacing{1}, actComment];
+                end
 
                 if isSectionSeparator && formatSectionPrecedingNewlines
                     replacedTextArray = MBeautifier.MFormatter.handleTrailingEmptyLines(replacedTextArray, nSectionPrecedingNewlines);
@@ -237,7 +241,7 @@ classdef MFormatter < handle
                     actCodeFinal = obj.performReplacements(actCode);
                 end
 
-                if ~obj.IsInBlockComment
+                if ~obj.IsInBlockComment && obj.Configuration.specialRule('PreserveInlineCommentSpacing').ValueAsDouble() == 0
                     line = [strtrim(actCodeFinal), ' ', actComment];
                 else
                     line = [strtrim(actCodeFinal), actComment];
@@ -259,8 +263,6 @@ classdef MFormatter < handle
             formatEndingNewlines = nEndingNewlines >= 0;
             if formatEndingNewlines
                 replacedTextArray = MBeautifier.MFormatter.handleTrailingEmptyLines(replacedTextArray, nEndingNewlines);
-
-                replacedTextArray{end} = strtrim(replacedTextArray{end});
             end
 
             formattedSource = [replacedTextArray{:}];
@@ -311,6 +313,9 @@ classdef MFormatter < handle
                 if isempty(strtrim(textArray{i}))
                     count = count + 1;
                 else
+                    if count > 0
+                        count = count+1;
+                    end
                     return;
                 end
             end
@@ -380,9 +385,15 @@ classdef MFormatter < handle
             tempCode = '';
             isLastCharDot = false;
             isLastCharTransp = false;
-            isInStr = false;
+            isInCharStr = false;
+            isInDblQuoteStr = false;
+
             for iStr = 1:numel(actCode)
                 actChar = actCode(iStr);
+
+                if isequal(actChar, '"') && ~isInCharStr
+                    isInDblQuoteStr = ~isInDblQuoteStr;
+                end
 
                 if isequal(actChar, '''')
                     % .' => NonConj transpose
@@ -393,19 +404,22 @@ classdef MFormatter < handle
                         if isLastCharTransp
                             tempCode = [tempCode, trnspTok];
                         else
-                            if numel(tempCode) && ~isInStr && numel(regexp(tempCode(end), charsIndicateTranspose))
+                            if isInDblQuoteStr
+                                tempCode = [tempCode, actChar];
+                                isLastCharTransp = false;
+                            elseif numel(tempCode) && ~isInCharStr && numel(regexp(tempCode(end), charsIndicateTranspose))
                                 tempCode = [tempCode, trnspTok];
                                 isLastCharTransp = true;
                             else
                                 tempCode = [tempCode, actChar];
-                                isInStr = ~isInStr;
+                                isInCharStr = ~isInCharStr;
                                 isLastCharTransp = false;
                             end
                         end
                     end
 
                     isLastCharDot = false;
-                elseif isequal(actChar, '.') && ~isInStr
+                elseif isequal(actChar, '.') && ~isInCharStr
                     isLastCharDot = true;
                     tempCode = [tempCode, actChar];
                     isLastCharTransp = false;
