@@ -1,66 +1,45 @@
-#!/usr/bin/env python
-# -*-coding:utf-8 -*-
-
 import os
-import re
-import linecache
-import math
-import shutil
-import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
 import cv2
-os.chdir(os.path.split(os.path.realpath(__file__))[0])
-print('copyright by Zhaosheng Zhang (misaraty@163.com)' + '\n' + 'last update: 2022-06-25')
 
-# pip install opencv-python
-# 权重越大，透明度越低
+# 设置工作目录为当前脚本所在目录
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print('copyright by Zhaosheng Zhang (misaraty@163.com)\nlast update: 2022-06-25')
 
-x1 = 0.4
-x2 = 1-x1
+# 混合权重
+x1 = 0.9
+x2 = 1 - x1
 
-over1 = cv2.addWeighted(cv2.imread('20220625.jpg'), x1, cv2.imread('20220624.jpg'), x2, 0)
-cv2.imwrite('./over1.jpg', over1)
+# 要叠加的图像列表（从最新到最旧）
+image_files = [
+    '20220625.jpg',
+    '20220624.jpg',
+    '20220622.jpg',
+    '20220620.jpg',
+    '20220617.jpg',
+    '20220616.jpg',
+]
 
-over2 = cv2.addWeighted(cv2.imread('over1.jpg'), x1, cv2.imread('20220622.jpg'), x2, 0)
-cv2.imwrite('./over2.jpg', over2)
+# 初始化融合图像
+final_img = None
 
-over3 = cv2.addWeighted(cv2.imread('over2.jpg'), x1, cv2.imread('20220620.jpg'), x2, 0)
-cv2.imwrite('./over3.jpg', over3)
+for img_file in image_files:
+    if not os.path.exists(img_file):
+        print(f"[警告] 找不到文件：{img_file}")
+        continue
 
-over4 = cv2.addWeighted(cv2.imread('over3.jpg'), x1, cv2.imread('20220617.jpg'), x2, 0)
-cv2.imwrite('./over4.jpg', over4)
+    img = cv2.imread(img_file)
+    if img is None:
+        print(f"[错误] 无法读取图像：{img_file}")
+        continue
 
-over5 = cv2.addWeighted(cv2.imread('over4.jpg'), x1, cv2.imread('20220616.jpg'), x2, 0)
-cv2.imwrite('./over5.jpg', over5)
+    if final_img is None:
+        final_img = img.copy()
+    else:
+        final_img = cv2.addWeighted(final_img, x1, img, x2, 0)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 保存最终融合图像
+if final_img is not None:
+    cv2.imwrite('final.jpg', final_img)
+    print('已保存最终融合图像：final.jpg')
+else:
+    print('未生成任何融合图像。')
