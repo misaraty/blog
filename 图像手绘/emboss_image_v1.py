@@ -33,4 +33,4 @@ for fname in os.listdir(dirpath):
     b = b.clip(0, 255)
 
     im = Image.fromarray(b.astype('uint8'))  # 重构图像
-    im.save(dirpath + fname.split('.')[0] + '_new.jpg')
+    im.save(dirpath + fname.split('.')[0] + '_pil.jpg')
