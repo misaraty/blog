@@ -2,15 +2,6 @@
 <img src="./20260204.png" width=auto height=auto/>
 </p>
 
-<table align="center">
-<tr>
-<td bgcolor="#e5e5e5" style="padding:8px;">
-<img src="./20260204.png" width="600"/>
-</td>
-</tr>
-</table>
-
-
 ## Contact
 * Blog: https://www.misaraty.com
 * ORCID: https://orcid.org/0000-0002-4080-0884
