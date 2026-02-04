@@ -1,5 +1,5 @@
 <p align=center>
-<img src="./20260204.png" width=auto height=auto/>
+<img src="./blog.png" width=auto height=auto/>
 </p>
 
 ## Contact
