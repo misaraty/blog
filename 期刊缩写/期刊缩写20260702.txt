@@ -154,7 +154,8 @@ Acta Botanica Neerlandica	Acta Bot. Neerl.
 Acta Chemica Scandinavica	Acta Chem. Scand.
 "Acta Chemica Scandinavica, Series A: Physical and Inorganic Chemistry"	Acta Chem. Scand. Ser. A
 "Acta Chemica Scandinavica, Series B: Organic Chemistry and Biochemistry"	Acta Chem. Scand. Ser. B
-Acta Chimica Sinica	Acta Chim. Sinica
+Acta Chimica Sinica	Acta Chim. Sin.
+ACTA CHIMICA SINICA	Acta Chim. Sin.
 Acta Chimica Slovenica	Acta Chim. Slov.
 Acta Chiropterologica	Acta Chiropterol.
 Acta Chromatographica	Acta Chromatogr.
@@ -203,6 +204,8 @@ Acta Odontologica Scandinavica	Acta Odontol. Scand.
 Acta Ornithologica	Acta Ornithol.
 Acta Palaeontologica Polonica	Acta Palaeontol. Polonica
 Acta Parasitology	Acta Parasitol.
+Acta Physica Sinica	Acta Phys. Sin.
+ACTA PHYSICA SINICA	Acta Phys. Sin.
 Acta Pharmacologica Sinica	Acta Pharmacol. Sin.
 Acta Physica Debrecina	Acta Phys. Debrecina
 Acta Physica et Chimica Debrecina	Acta Phys. Chim. Debrecina
@@ -1971,6 +1974,9 @@ Chemical Fibers International	Chem. Fibers Int.
 Chemical Geology	Chem. Geol.
 Chemical Health and Safety	Chem. Health Saf.
 Chemical Industry & Chemical Engineering Quarterly	Chem. Ind. Chem. Eng. Q.
+Chemical Journal of Chinese Universities	Chem. J. Chin. Univ.
+CHEMICAL RESEARCH IN CHINESE UNIVERSITIES	Chem. J. Chin. Univ.
+Chem. J. Chinese Universities	Chem. J. Chin. Univ.
 Chemical Papers	Chem. Pap.
 Chemical Papers - Chemicke Zvesti	Chem. Pap. - Chem. Zvesti
 Chemical Physics	Chem. Phys.
@@ -2064,6 +2070,7 @@ Chinese Journal of Electronics	Chin. J. Electron.
 Chinese Journal of Geochemistry	Chin. J. Geochem.
 Chinese Journal of Geophysics	Chin. J. Geophys.
 Chinese Journal of Inorganic Chemistry	Chin. J. Inorg. Chem.
+CHINESE JOURNAL OF INORGANIC CHEMISTRY	Chin. J. Inorg. Chem.
 Chinese Journal of Mechanical Engineering: Additive Manufacturing Frontiers	Chin. J. Mech. Eng.: Addit. Manuf. Front.
 Chinese Journal of Nuclear Physics	Chin. J. Nucl. Phys.
 Chinese Journal of Oceanology and Limnology	Chin. J. Oceanol. Limnol.
