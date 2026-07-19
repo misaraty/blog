@@ -6855,7 +6855,6 @@ Journal of the American Association of Variable Star Observers	J. Am. Assoc. Var
 Journal of the American Association of Variable Star Observers	JAAVSO
 Journal of the American Ceramic Society	J. Am. Ceram. Soc.
 Journal of the American Chemical Society	J. Am. Chem. Soc.
-Journal of the American Chemical Society	JACS
 Journal of the American College of Cardiology	J. Am. Coll. Cardiol.
 Journal of the American College of Clinical Pharmacy	J. Am. Coll. Clin. Pharm.
 Journal of the American College of Nutrition	J. Am. Coll. Nutr.
