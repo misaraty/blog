@@ -8578,6 +8578,7 @@ Physics in Technology	Phys. Technol.
 Physics Letters A	Phys. Lett. A
 Physics Letters B	Phys. Lett. B
 Physics of Atomic Nuclei	Phys. At. Nucl.
+Physics of Fluids	Phys. Fluids
 Physics of Fluids A	Phys. Fluids A
 Physics of Fluids B	Phys. Fluids B
 Physics of Life Reviews	Phys. Life Rev.
@@ -8880,6 +8881,7 @@ Proceedings of the Koninklijke Nederlandse Akademie van Wetenschappen	Proc. K. N
 Proceedings of the Linnean Society of London	Proc. Linn. Soc. London
 Proceedings of the Linnean Society of New South Wales	Proc. Linn. Soc. N. S. W.
 Proceedings of the London Mathematical Society	Proc. London Math. Soc.
+Proceedings of the National Academy of Sciences	PNAS
 Proceedings of the National Academy of Sciences of the United States of America	PNAS
 Proceedings of the National academy of Sciences of the United States of America	Proc. Natl. Acad. Sci. U.S.A.
 Proceedings of the Nova Scotian Institute of Science	Proc. N. S. Inst. Sci.
