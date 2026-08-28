@@ -10453,3 +10453,4 @@ Information Fusion	Inf. Fusion
 Journal of Big Data	J. Big Data
 Knowledge-Based Systems	Knowledge-Based Syst.
 ESAIM: Mathematical Modelling and Numerical Analysis	ESAIM. Math. Model. Numer. Anal.
+Multiscale Modeling & Simulation	Multiscale Model. Simul.
